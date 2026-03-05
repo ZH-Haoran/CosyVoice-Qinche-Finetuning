@@ -1,0 +1,161 @@
+
+[WandB] 已初始化: https://wandb.ai/haoranzhang-me-the-chinese-university-of-hong-kong-shenzhen/cosyvoice-qinche/runs/p9ghl1up
+
+[1/3] 加载模型...
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+/data_hss/miniconda3/envs/cosyvoice/lib/python3.10/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-03-04 23:42:56,914 INFO input frame rate=25
+/data_hss/miniconda3/envs/cosyvoice/lib/python3.10/site-packages/torch/nn/utils/weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+Downloading Model to directory: /root/.cache/modelscope/hub/pengzhendong/wetext
+2026-03-04 23:43:05,533 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:06,047 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/revisions HTTP/1.1" 200 222
+2026-03-04 23:43:06,158 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo/files?Revision=master&Recursive=True HTTP/1.1" 200 None
+Downloading [configuration.json]:   0%|                                                                            | 0.00/36.0 [00:00<?, ?B/s]2026-03-04 23:43:06,168 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:06,451 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=configuration.json HTTP/1.1" 200 36
+Downloading [configuration.json]: 100%|██████████████████████████████████████████████████████████████████████| 36.0/36.0 [00:00<00:00, 124B/s]
+Downloading [full_to_half.fst]:   0%|                                                                             | 0.00/17.8k [00:00<?, ?B/s]2026-03-04 23:43:06,463 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:06,778 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=full_to_half.fst HTTP/1.1" 302 342
+2026-03-04 23:43:06,783 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:08,658 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/66/52/5f2871df378216c443eedc0789e1f884b3156a3b0ba086e52143788e951c?filename=full_to_half.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638986-27a93dc58a3744a28ecba9a4fc84d298-0-b475f1a69c5d3b91ea48f1256b21f69e HTTP/1.1" 206 18210
+Downloading [full_to_half.fst]: 100%|████████████████████████████████████████████████████████████████████| 17.8k/17.8k [00:02<00:00, 8.27kB/s]
+Downloading [README.md]:   0%|                                                                                    | 0.00/1.36k [00:00<?, ?B/s]2026-03-04 23:43:08,673 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:08,957 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=README.md HTTP/1.1" 200 1389
+Downloading [README.md]: 100%|███████████████████████████████████████████████████████████████████████████| 1.36k/1.36k [00:00<00:00, 4.79kB/s]
+Downloading [remove_interjections.fst]:   0%|                                                                     | 0.00/11.1k [00:00<?, ?B/s]2026-03-04 23:43:08,971 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:09,251 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=remove_interjections.fst HTTP/1.1" 302 350
+2026-03-04 23:43:09,256 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:09,310 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/70/f3/6aa8071968f72278fb8db9f17a060e8f8ac73a5e4161a009e33c688fedc1?filename=remove_interjections.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638989-771eb686ab0a4a6195f7fbbcd2fde70e-0-5abb67e1a69b92fa38fe61b0fe61e414 HTTP/1.1" 206 11322
+Downloading [remove_interjections.fst]: 100%|████████████████████████████████████████████████████████████| 11.1k/11.1k [00:00<00:00, 32.8kB/s]
+Downloading [remove_puncts.fst]:   0%|                                                                            | 0.00/16.3k [00:00<?, ?B/s]2026-03-04 23:43:09,323 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:09,587 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=remove_puncts.fst HTTP/1.1" 302 343
+2026-03-04 23:43:09,592 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:09,646 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/0d/69/853648848ddad69e0b7a6398e5bc15be39b5559aa0119938aa6e60632538?filename=remove_puncts.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638989-42c4aa67253a473cb76e2e14a5b17726-0-abb7e4aa21dd91a1ebc06c88f43ae1de HTTP/1.1" 206 16642
+Downloading [remove_puncts.fst]: 100%|███████████████████████████████████████████████████████████████████| 16.3k/16.3k [00:00<00:00, 50.9kB/s]
+Downloading [tag_oov.fst]:   0%|                                                                                   | 0.00/458k [00:00<?, ?B/s]2026-03-04 23:43:09,660 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:09,939 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=tag_oov.fst HTTP/1.1" 302 337
+2026-03-04 23:43:09,945 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:10,009 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/7d/58/b861760f691b24f095ca17dcac6ccb79de1871282847895380249f2b034b?filename=tag_oov.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638989-fa55190c1b9443a18bc8556c4c7f8699-0-aabed65150d3f86c51d4d9c4e4684d67 HTTP/1.1" 206 468802
+Downloading [tag_oov.fst]: 100%|███████████████████████████████████████████████████████████████████████████| 458k/458k [00:00<00:00, 1.26MB/s]
+Downloading [zh/tn/tagger.fst]:   0%|                                                                              | 0.00/793k [00:00<?, ?B/s]2026-03-04 23:43:10,044 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:10,312 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=zh%2Ftn%2Ftagger.fst HTTP/1.1" 302 336
+2026-03-04 23:43:10,317 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:10,382 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/82/61/de8e6dbb17f2cc8e51067e237c363b3ffc1341fef4080c2c73b850d46d7f?filename=tagger.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638990-040e4b5362d54945b1e4f98eec751cca-0-4175c0214c345f7814d37781ae351843 HTTP/1.1" 206 811822
+Downloading [zh/tn/tagger.fst]: 100%|██████████████████████████████████████████████████████████████████████| 793k/793k [00:00<00:00, 2.14MB/s]
+Downloading [ja/itn/tagger.fst]:   0%|                                                                             | 0.00/581k [00:00<?, ?B/s]2026-03-04 23:43:10,439 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:10,733 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=ja%2Fitn%2Ftagger.fst HTTP/1.1" 302 336
+2026-03-04 23:43:10,737 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:10,811 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/fc/01/09d62ce57bbd2ab424250b8021b8add63e0b1278b823ddb5443642d39e9c?filename=tagger.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638990-ba32377d8d4843a983735e1ffa79ebdf-0-c59c95d2d0d9ad4312ac7b238759411a HTTP/1.1" 206 595066
+Downloading [ja/itn/tagger.fst]: 100%|█████████████████████████████████████████████████████████████████████| 581k/581k [00:00<00:00, 1.49MB/s]
+Downloading [en/tn/tagger.fst]:   0%|                                                                             | 0.00/4.98M [00:00<?, ?B/s]2026-03-04 23:43:10,851 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:11,125 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=en%2Ftn%2Ftagger.fst HTTP/1.1" 302 336
+2026-03-04 23:43:11,130 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:11,196 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/bb/80/4f88030153999f154f01950c18dbfd64de2c4cfc5035e21371d4eb4ead8a?filename=tagger.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638991-f0ae3940613c4465857eb612cdb41e20-0-04dfa669481dc2a8d965429217f9cc84 HTTP/1.1" 206 5220942
+Downloading [en/tn/tagger.fst]: 100%|████████████████████████████████████████████████████████████████████| 4.98M/4.98M [00:00<00:00, 12.5MB/s]
+Downloading [zh/itn/tagger.fst]:   0%|                                                                            | 0.00/1.12M [00:00<?, ?B/s]2026-03-04 23:43:11,292 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:11,561 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=zh%2Fitn%2Ftagger.fst HTTP/1.1" 302 336
+2026-03-04 23:43:11,565 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:11,627 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/48/54/8211f0bda9108f31874e36b892b58f9c0b218afdfb5a7af251d97205123b?filename=tagger.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638991-0e380d050a8f4b6f953d6cb92956c34b-0-f88db4df9a4ff636d5941e36251c457c HTTP/1.1" 206 1177666
+Downloading [zh/itn/tagger.fst]: 100%|███████████████████████████████████████████████████████████████████| 1.12M/1.12M [00:00<00:00, 3.19MB/s]
+Downloading [ja/tn/tagger.fst]:   0%|                                                                              | 0.00/458k [00:00<?, ?B/s]2026-03-04 23:43:11,675 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:11,938 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=ja%2Ftn%2Ftagger.fst HTTP/1.1" 302 336
+2026-03-04 23:43:11,942 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:12,006 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/cc/e6/0ca1d1e5f29ae439434c94e6659166130b3a12c91e4b6e2becedd5aa7321?filename=tagger.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638991-e23c2d42c3734d7ea5684b675f8cb0cc-0-d224f1465a9554f248f10b0e820d3910 HTTP/1.1" 206 469322
+Downloading [ja/tn/tagger.fst]: 100%|██████████████████████████████████████████████████████████████████████| 458k/458k [00:00<00:00, 1.33MB/s]
+Downloading [zh/itn/tagger_enable_0_to_9.fst]:   0%|                                                              | 0.00/1.13M [00:00<?, ?B/s]2026-03-04 23:43:12,042 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:12,310 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=zh%2Fitn%2Ftagger_enable_0_to_9.fst HTTP/1.1" 302 350
+2026-03-04 23:43:12,316 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:12,376 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/a5/e5/bc7726fdf1f3c020d9d2abc8b955234142950c0a66aea5038f490efb73e9?filename=tagger_enable_0_to_9.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638992-725f70d67d9f40b889bc408e702d0ae6-0-1766208e79c89e9af80f8eaec255a9e0 HTTP/1.1" 206 1188590
+Downloading [zh/itn/tagger_enable_0_to_9.fst]: 100%|█████████████████████████████████████████████████████| 1.13M/1.13M [00:00<00:00, 3.26MB/s]
+Downloading [ja/itn/tagger_enable_0_to_9.fst]:   0%|                                                               | 0.00/519k [00:00<?, ?B/s]2026-03-04 23:43:12,419 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:12,691 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=ja%2Fitn%2Ftagger_enable_0_to_9.fst HTTP/1.1" 302 350
+2026-03-04 23:43:12,696 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:12,741 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/5f/92/a57e5b7e86e997eb06335c00c3a270e5a538265f8fde6eaf6ba92b63f5f9?filename=tagger_enable_0_to_9.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638992-cb8440f2e0a14056b5d900ebbb6beb59-0-36721a334325ac488eedea7d102e3ebd HTTP/1.1" 206 531458
+Downloading [ja/itn/tagger_enable_0_to_9.fst]: 100%|███████████████████████████████████████████████████████| 519k/519k [00:00<00:00, 1.55MB/s]
+Downloading [traditional_to_simple.fst]:   0%|                                                                     | 0.00/476k [00:00<?, ?B/s]2026-03-04 23:43:12,770 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:13,063 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=traditional_to_simple.fst HTTP/1.1" 302 351
+2026-03-04 23:43:13,068 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:13,129 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/5b/64/2063048290dbe7dded164230e3885d418464e6987f16a1f35078a9cb6a30?filename=traditional_to_simple.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638993-e6621e8a50624c478f30905bf1d148ee-0-5edc56f77500838d5ebffa76d5417f3b HTTP/1.1" 206 487346
+Downloading [traditional_to_simple.fst]: 100%|█████████████████████████████████████████████████████████████| 476k/476k [00:00<00:00, 1.28MB/s]
+Downloading [ja/tn/verbalizer.fst]:   0%|                                                                         | 0.00/84.9k [00:00<?, ?B/s]2026-03-04 23:43:13,161 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:13,436 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=ja%2Ftn%2Fverbalizer.fst HTTP/1.1" 302 340
+2026-03-04 23:43:13,443 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:13,494 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/79/d4/9c76a7b556660dc4babe908b477787a550ab1415d75440c180f3c0c81ee0?filename=verbalizer.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638993-bf4e86ada8404680b7d3fc1de7a45995-0-ca14c58b59a7a3006cdef53529961dc6 HTTP/1.1" 206 86902
+Downloading [ja/tn/verbalizer.fst]: 100%|█████████████████████████████████████████████████████████████████| 84.9k/84.9k [00:00<00:00, 254kB/s]
+Downloading [ja/itn/verbalizer.fst]:   0%|                                                                        | 0.00/92.9k [00:00<?, ?B/s]2026-03-04 23:43:13,514 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:13,794 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=ja%2Fitn%2Fverbalizer.fst HTTP/1.1" 302 340
+2026-03-04 23:43:13,798 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:13,847 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/25/bb/53f5e16d7051037d03a167909bba4268fced4829d6995a50ccb5b096ba30?filename=verbalizer.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638993-98ac221eb8584dd49625dc8780cae49c-0-4afbb88b967af3dff2bff50ef3603a06 HTTP/1.1" 206 95090
+Downloading [ja/itn/verbalizer.fst]: 100%|████████████████████████████████████████████████████████████████| 92.9k/92.9k [00:00<00:00, 277kB/s]
+Downloading [zh/itn/verbalizer.fst]:   0%|                                                                        | 0.00/85.1k [00:00<?, ?B/s]2026-03-04 23:43:13,866 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:14,140 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=zh%2Fitn%2Fverbalizer.fst HTTP/1.1" 302 340
+2026-03-04 23:43:14,147 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:14,201 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/86/c3/5a5772a79bc998149e7eb0344544e52675b6fc85ad362cbad912349c017d?filename=verbalizer.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638994-be26f0230f7b4e1cb1db512fe0cb260a-0-17541289d381675bbb0fe6998d32f2a0 HTTP/1.1" 206 87098
+Downloading [zh/itn/verbalizer.fst]: 100%|████████████████████████████████████████████████████████████████| 85.1k/85.1k [00:00<00:00, 252kB/s]
+Downloading [en/tn/verbalizer.fst]:   0%|                                                                         | 0.00/1.74M [00:00<?, ?B/s]2026-03-04 23:43:14,220 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:14,493 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=en%2Ftn%2Fverbalizer.fst HTTP/1.1" 302 340
+2026-03-04 23:43:14,498 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:14,554 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/33/ad/65460a3e8f7fe313994ff0204a218c0fcb5dec9c09b24aeeaa30ef21d67b?filename=verbalizer.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638994-aaa7616be23d4a6fb93f10f6db1c359b-0-6716838dc23cc25c8b202efcf7d56ffe HTTP/1.1" 206 1822714
+Downloading [en/tn/verbalizer.fst]: 100%|████████████████████████████████████████████████████████████████| 1.74M/1.74M [00:00<00:00, 4.91MB/s]
+Downloading [zh/tn/verbalizer.fst]:   0%|                                                                         | 0.00/85.6k [00:00<?, ?B/s]2026-03-04 23:43:14,605 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:14,882 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=zh%2Ftn%2Fverbalizer.fst HTTP/1.1" 302 340
+2026-03-04 23:43:14,886 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:14,941 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/9f/ca/dad76cafddb2e96b92d892d18249f0ba5fbe60e4d4fc51f466cb6bc7ade9?filename=verbalizer.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638994-144e770cb0ce4da5ade27c8a02da192f-0-4c8b7f0abae2ab240ccd415e38b35bd1 HTTP/1.1" 206 87702
+Downloading [zh/tn/verbalizer.fst]: 100%|█████████████████████████████████████████████████████████████████| 85.6k/85.6k [00:00<00:00, 255kB/s]
+Downloading [zh/tn/verbalizer_remove_erhua.fst]:   0%|                                                            | 0.00/85.6k [00:00<?, ?B/s]2026-03-04 23:43:14,958 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:15,232 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo?Revision=master&FilePath=zh%2Ftn%2Fverbalizer_remove_erhua.fst HTTP/1.1" 302 353
+2026-03-04 23:43:15,237 DEBUG Starting new HTTPS connection (1): cdn-lfs-cn-1.modelscope.cn:443
+2026-03-04 23:43:15,287 DEBUG https://cdn-lfs-cn-1.modelscope.cn:443 "GET /prod/lfs-objects/f6/66/3ebe403344f9d68c4c6c64d3bf17ba755deda41d3386bc010280b96ee315?filename=verbalizer_remove_erhua.fst&namespace=pengzhendong&repository=wetext&revision=master&tag=model&auth_key=1772638995-6b3c28ac279a40a7972b167992622bdf-0-bd19aab2580d3e9099cf063e0937f06a HTTP/1.1" 206 87702
+Downloading [zh/tn/verbalizer_remove_erhua.fst]: 100%|████████████████████████████████████████████████████| 85.6k/85.6k [00:00<00:00, 259kB/s]
+Downloading Model to directory: /root/.cache/modelscope/hub/pengzhendong/wetext
+2026-03-04 23:43:15,506 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:43:15,787 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/revisions HTTP/1.1" 200 222
+2026-03-04 23:43:15,898 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo/files?Revision=master&Recursive=True HTTP/1.1" 200 None
+2026-03-04 23:43:16,099 INFO use wetext frontend
+采样率: 24000
+[警告] Flow微调权重不存在: examples/qinche/cosyvoice2/exp/cosyvoice2/flow/epoch_17_whole.pt
+将使用原始预训练模型进行推理
+
+/epoch_19_whole.pt重: exp/cosyvoice2/llm_lr1e-6
+LLM权重加载成功!
+[提示音频文本] 跟你做的每一件事，都不讨厌。 (来自: ../../../data/qinche/inference_ref/prompt_text.txt)
+
+[3/3] 开始推理...
+
+[1/5] 合成: 跟你做的每一件事，都不讨厌。...
+  0%|                                                                                                                   | 0/1 [00:00<?, ?it/s]2026-03-04 23:43:35,142 INFO synthesis text 跟你做的每一件事，都不讨厌。
+2026-03-04 23:43:38,362 INFO yield speech len 3.0, rtf 1.0733861128489177
+/inference_last_epoch_19/output_000.wav
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:08<00:00,  8.03s/it]
+
+[2/5] 合成: 还记得我把你捡回暗点的那个地方吗，那里有一台管风琴。...
+  0%|                                                                                                                   | 0/1 [00:00<?, ?it/s]2026-03-04 23:43:39,353 INFO synthesis text 还记得我把你捡回暗点的那个地方吗，那里有一台管风琴。
+2026-03-04 23:43:41,830 INFO yield speech len 4.84, rtf 0.5118464635423392
+/inference_last_epoch_19/output_001.wav
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:03<00:00,  3.45s/it]
+
+[3/5] 合成: 今天天气真不错，适合出去走走。...
+  0%|                                                                                                                   | 0/1 [00:00<?, ?it/s]2026-03-04 23:43:42,162 INFO synthesis text 今天天气真不错，适合出去走走。
+2026-03-04 23:43:45,273 INFO yield speech len 6.64, rtf 0.4684646445584585
+/inference_last_epoch_19/output_002.wav
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:03<00:00,  3.43s/it]
+
+[4/5] 合成: 时光荏苒，岁月如梭，转眼间我们已经走过了那么长的路。...
+  0%|                                                                                                                   | 0/1 [00:00<?, ?it/s]2026-03-04 23:43:45,545 INFO synthesis text 时光荏苒，岁月如梭，转眼间我们已经走过了那么长的路。
+2026-03-04 23:43:48,505 INFO yield speech len 6.12, rtf 0.4836101937138177
+/inference_last_epoch_19/output_003.wav
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:03<00:00,  3.23s/it]
+
+[5/5] 合成: 牛肉面是中国西北地区的特色美食，面条劲道，汤汁浓郁，深受各地食客喜爱。...
+  0%|                                                                                                                   | 0/1 [00:00<?, ?it/s]2026-03-04 23:43:48,752 INFO synthesis text 牛肉面是中国西北地区的特色美食，面条劲道，汤汁浓郁，深受各地食客喜爱。
+2026-03-04 23:43:52,265 INFO yield speech len 7.6, rtf 0.46222689904664693
+/inference_last_epoch_19/output_004.wav
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:03<00:00,  3.76s/it]
+
+============================================================
+推理完成!
+生成音频数: 5
+/inference_last_epoch_19_lr1e-6
+/inference_last_epoch_19/inference_report.txt
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.

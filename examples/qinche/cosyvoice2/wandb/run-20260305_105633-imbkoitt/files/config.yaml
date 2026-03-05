@@ -1,0 +1,86 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        e:
+            3r8l72ar1ycehc9zfz9jb9vdq2wqtkgl:
+                args:
+                    - --model_dir=../../../pretrained_models/CosyVoice2-0.5B
+                    - "--llm_checkpoint=exp/cosyvoice2/llm_lr1e-6\r_batch8000\r/epoch_1_whole.pt"
+                    - --prompt_audio=../../../data/qinche/inference_ref/prompt_1.wav
+                    - --text_file=inference_texts.txt
+                    - "--output_dir=exp/cosyvoice2/llm_lr1e-6\r_batch8000\r/inference_epoch_1"
+                    - --use_wandb
+                    - --wandb_project=cosyvoice-qinche
+                    - --wandb_run_name=llm-finetune-lr-batch-20260305-102655_epoch1_prompt1
+                codePath: examples/qinche/cosyvoice2/inference.py
+                codePathLocal: inference.py
+                cpu_count: 96
+                cpu_count_logical: 192
+                cudaVersion: "12.8"
+                disk:
+                    /:
+                        total: "3719290880000"
+                        used: "479102406656"
+                email: haoranzhang.me@gmail.com
+                executable: /data_hss/miniconda3/envs/cosyvoice/bin/python
+                git:
+                    commit: 04bcadc6340e266b4ba09f4474b4668c444aa063
+                    remote: https://github.com/FunAudioLLM/CosyVoice.git
+                gpu: NVIDIA H200
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Hopper
+                      cudaCores: 16896
+                      memoryTotal: "150754820096"
+                      name: NVIDIA H200
+                      uuid: GPU-b8d6b160-0e27-5d0a-787e-da688b2b1a64
+                host: nb-6819e6860e28a04e0f-76cc799cdc-9f6zs
+                memory:
+                    total: "2164153065472"
+                os: Linux-5.15.0-140-generic-x86_64-with-glibc2.36
+                program: /data_hss/zhanghaoran/CosyVoice/examples/qinche/cosyvoice2/inference.py
+                python: CPython 3.10.19
+                root: /data_hss/zhanghaoran/CosyVoice/examples/qinche/cosyvoice2
+                startedAt: "2026-03-05T02:56:33.320638Z"
+                writerId: 3r8l72ar1ycehc9zfz9jb9vdq2wqtkgl
+        m: []
+        python_version: 3.10.19
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 49
+                - 53
+                - 105
+            "2":
+                - 1
+                - 5
+                - 11
+                - 49
+                - 50
+                - 53
+                - 83
+                - 105
+                - 106
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.10.19
+            "5": 0.25.0
+            "6": 4.51.3
+            "12": 0.25.0
+            "13": linux-x86_64
+flow_checkpoint:
+    value: null
+llm_checkpoint:
+    value: "exp/cosyvoice2/llm_lr1e-6\r_batch8000\r/epoch_1_whole.pt"
+model_dir:
+    value: ../../../pretrained_models/CosyVoice2-0.5B
+num_test_texts:
+    value: 6
+prompt_audio:
+    value: ../../../data/qinche/inference_ref/prompt_1.wav
+stream:
+    value: false

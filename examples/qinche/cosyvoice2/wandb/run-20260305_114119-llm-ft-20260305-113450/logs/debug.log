@@ -1,0 +1,25 @@
+2026-03-05 11:41:19,156 INFO    MainThread:64627 [wandb_setup.py:_flush():81] Current SDK version is 0.25.0
+2026-03-05 11:41:19,156 INFO    MainThread:64627 [wandb_setup.py:_flush():81] Configure stats pid to 64627
+2026-03-05 11:41:19,156 INFO    MainThread:64627 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-05 11:41:19,157 INFO    MainThread:64627 [wandb_init.py:setup_run_log_directory():717] Logging user logs to /data_hss/zhanghaoran/CosyVoice/examples/qinche/cosyvoice2/wandb/run-20260305_114119-llm-ft-20260305-113450/logs/debug.log
+2026-03-05 11:41:19,158 INFO    MainThread:64627 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to /data_hss/zhanghaoran/CosyVoice/examples/qinche/cosyvoice2/wandb/run-20260305_114119-llm-ft-20260305-113450/logs/debug-internal.log
+2026-03-05 11:41:19,158 INFO    MainThread:64627 [wandb_init.py:init():844] calling init triggers
+2026-03-05 11:41:19,158 INFO    MainThread:64627 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'model_dir': '../../../pretrained_models/CosyVoice2-0.5B', 'flow_checkpoint': None, 'llm_checkpoint': 'exp/cosyvoice2/llm_lr1e-6\r_batch8000\r/epoch_9_whole.pt', 'prompt_audio': '../../../data/qinche/inference_ref/prompt_2.wav', 'num_test_texts': 6, 'stream': False, '_wandb': {}}
+2026-03-05 11:41:19,159 INFO    MainThread:64627 [wandb_init.py:init():892] starting backend
+2026-03-05 11:41:20,050 INFO    MainThread:64627 [wandb_init.py:init():895] sending inform_init request
+2026-03-05 11:41:20,079 INFO    MainThread:64627 [wandb_init.py:init():903] backend started and connected
+2026-03-05 11:41:20,086 INFO    MainThread:64627 [wandb_init.py:init():973] updated telemetry
+2026-03-05 11:41:20,275 INFO    MainThread:64627 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-03-05 11:41:23,819 INFO    MainThread:64627 [wandb_init.py:init():1037] run resumed
+2026-03-05 11:41:23,824 INFO    MainThread:64627 [wandb_init.py:init():1042] starting run threads in backend
+2026-03-05 11:41:24,871 INFO    MainThread:64627 [wandb_run.py:_console_start():2524] atexit reg
+2026-03-05 11:41:24,872 INFO    MainThread:64627 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-03-05 11:41:24,872 INFO    MainThread:64627 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-03-05 11:41:24,872 INFO    MainThread:64627 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-03-05 11:41:24,895 INFO    MainThread:64627 [wandb_init.py:init():1082] run started, returning control to user process
+2026-03-05 11:42:47,781 INFO    MainThread:64627 [wandb_run.py:_finish():2291] finishing run haoranzhang-me-the-chinese-university-of-hong-kong-shenzhen/cosyvoice-qinche-clean/llm-ft-20260305-113450
+2026-03-05 11:42:47,782 INFO    MainThread:64627 [wandb_run.py:_atexit_cleanup():2490] got exitcode: 0
+2026-03-05 11:42:47,785 INFO    MainThread:64627 [wandb_run.py:_restore():2472] restore
+2026-03-05 11:42:47,785 INFO    MainThread:64627 [wandb_run.py:_restore():2478] restore done
+2026-03-05 11:42:51,224 INFO    MainThread:64627 [wandb_run.py:_footer_sync_info():3868] logging synced files

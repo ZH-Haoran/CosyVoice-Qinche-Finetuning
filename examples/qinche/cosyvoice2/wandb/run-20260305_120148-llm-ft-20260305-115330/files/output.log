@@ -1,0 +1,50 @@
+
+[WandB] 已恢复 run: https://wandb.ai/haoranzhang-me-the-chinese-university-of-hong-kong-shenzhen/cosyvoice-qinche-clean/runs/llm-ft-20260305-115330
+
+[模型] 加载 CosyVoice2 from ../../../pretrained_models/CosyVoice2-0.5B
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+/data_hss/miniconda3/envs/cosyvoice/lib/python3.10/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-03-05 12:02:11,185 INFO input frame rate=25
+/data_hss/miniconda3/envs/cosyvoice/lib/python3.10/site-packages/torch/nn/utils/weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+Downloading Model to directory: /root/.cache/modelscope/hub/pengzhendong/wetext
+2026-03-05 12:02:19,374 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-05 12:02:21,482 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/revisions HTTP/1.1" 200 222
+2026-03-05 12:02:21,593 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo/files?Revision=master&Recursive=True HTTP/1.1" 200 None
+Downloading Model to directory: /root/.cache/modelscope/hub/pengzhendong/wetext
+2026-03-05 12:02:21,800 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-05 12:02:22,656 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/revisions HTTP/1.1" 200 222
+2026-03-05 12:02:22,769 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo/files?Revision=master&Recursive=True HTTP/1.1" 200 None
+2026-03-05 12:02:22,976 INFO use wetext frontend
+[模型] 加载 LLM checkpoint: exp/cosyvoice2/llm_lr1e-6_batch8000/epoch_9_whole.pt
+[Speaker Similarity] 已加载 campplus 模型: ../../../pretrained_models/CosyVoice2-0.5B/campplus.onnx
+[提示] Prompt audio: ../../../data/qinche/inference_ref/prompt_1.wav
+[提示] Prompt text: 跟你做的每一件事，都不讨厌。
+[输出] 输出目录: exp/cosyvoice2/llm_lr1e-6_batch8000/inference_epoch_9_best
+[文本] 共 4 条测试文本
+
+[1/4] 合成: 还记得我把你捡回暗点的那个地方吗，那里有一台管风琴。...
+  0%|                                                                                                            | 0/1 [00:00<?, ?it/s]2026-03-05 12:02:39,537 INFO synthesis text 还记得我把你捡回暗点的那个地方吗，那里有一台管风琴。
+2026-03-05 12:02:43,393 INFO yield speech len 4.72, rtf 0.8170367802603771
+    -> 保存: exp/cosyvoice2/llm_lr1e-6_batch8000/inference_epoch_9_best/output_000.wav (时长: 4.72s, SPK_SIM: 0.8457)
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:08<00:00,  8.02s/it]
+[2/4] 合成: 今天天气真不错，适合出去走走。...
+  0%|                                                                                                            | 0/1 [00:00<?, ?it/s]2026-03-05 12:02:44,030 INFO synthesis text 今天天气真不错，适合出去走走。
+2026-03-05 12:02:45,907 INFO yield speech len 3.08, rtf 0.6093926243967824
+    -> 保存: exp/cosyvoice2/llm_lr1e-6_batch8000/inference_epoch_9_best/output_001.wav (时长: 3.08s, SPK_SIM: 0.8124)
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  2.55s/it]
+[3/4] 合成: 时光荏苒，岁月如梭，转眼间我们已经走过了那么长的路。...
+  0%|                                                                                                            | 0/1 [00:00<?, ?it/s]2026-03-05 12:02:46,528 INFO synthesis text 时光荏苒，岁月如梭，转眼间我们已经走过了那么长的路。
+2026-03-05 12:02:49,546 INFO yield speech len 6.16, rtf 0.4900693119346321
+    -> 保存: exp/cosyvoice2/llm_lr1e-6_batch8000/inference_epoch_9_best/output_002.wav (时长: 6.16s, SPK_SIM: 0.8700)
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:03<00:00,  3.75s/it]
+[4/4] 合成: 牛肉面是中国西北地区的特色美食，面条劲道，汤汁浓郁，深受各地食客喜爱。...
+  0%|                                                                                                            | 0/1 [00:00<?, ?it/s]2026-03-05 12:02:50,220 INFO synthesis text 牛肉面是中国西北地区的特色美食，面条劲道，汤汁浓郁，深受各地食客喜爱。
+2026-03-05 12:02:54,068 INFO yield speech len 8.16, rtf 0.47157307465871173
+    -> 保存: exp/cosyvoice2/llm_lr1e-6_batch8000/inference_epoch_9_best/output_003.wav (时长: 8.16s, SPK_SIM: 0.8722)
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:04<00:00,  4.53s/it]
+
+[Speaker Similarity] 平均值: 0.8501
+
+[完成] 所有音频已保存到: exp/cosyvoice2/llm_lr1e-6_batch8000/inference_epoch_9_best

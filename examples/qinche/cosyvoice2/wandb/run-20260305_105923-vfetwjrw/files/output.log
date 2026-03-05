@@ -1,0 +1,10 @@
+
+[WandB] 已初始化: https://wandb.ai/haoranzhang-me-the-chinese-university-of-hong-kong-shenzhen/cosyvoice-qinche/runs/vfetwjrw
+
+[模型] 加载 CosyVoice2 from ../../../pretrained_models/CosyVoice2-0.5B
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Traceback (most recent call last):
+  File "/data_hss/zhanghaoran/CosyVoice/examples/qinche/cosyvoice2/inference.py", line 260, in <module>
+    main()
+  File "/data_hss/zhanghaoran/CosyVoice/examples/qinche/cosyvoice2/inference.py", line 168, in main
+    cosyvoice = CosyVoice2(args.model_dir)

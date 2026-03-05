@@ -1,0 +1,65 @@
+
+[WandB] 已初始化: https://wandb.ai/haoranzhang-me-the-chinese-university-of-hong-kong-shenzhen/cosyvoice-qinche/runs/3cz9zmli
+
+[1/3] 加载模型...
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+/data_hss/miniconda3/envs/cosyvoice/lib/python3.10/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-03-04 23:46:00,973 INFO input frame rate=25
+/data_hss/miniconda3/envs/cosyvoice/lib/python3.10/site-packages/torch/nn/utils/weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+Downloading Model to directory: /root/.cache/modelscope/hub/pengzhendong/wetext
+2026-03-04 23:46:08,516 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:46:09,029 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/revisions HTTP/1.1" 200 222
+2026-03-04 23:46:09,148 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo/files?Revision=master&Recursive=True HTTP/1.1" 200 None
+Downloading Model to directory: /root/.cache/modelscope/hub/pengzhendong/wetext
+2026-03-04 23:46:09,357 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-04 23:46:09,641 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/revisions HTTP/1.1" 200 222
+2026-03-04 23:46:09,745 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo/files?Revision=master&Recursive=True HTTP/1.1" 200 None
+2026-03-04 23:46:09,945 INFO use wetext frontend
+采样率: 24000
+[警告] Flow微调权重不存在: examples/qinche/cosyvoice2/exp/cosyvoice2/flow/epoch_17_whole.pt
+将使用原始预训练模型进行推理
+
+/epoch_19_whole.pt重: exp/cosyvoice2/llm_lr1e-6
+LLM权重加载成功!
+[提示音频文本] 还记得我把你捡回暗点的那个地方吗，那里有一台管风琴。 (来自: ../../../data/qinche/inference_ref/prompt_text.txt)
+
+[3/3] 开始推理...
+
+[1/5] 合成: 跟你做的每一件事，都不讨厌。...
+  0%|                                                                                                                   | 0/1 [00:00<?, ?it/s]2026-03-04 23:46:27,956 INFO synthesis text 跟你做的每一件事，都不讨厌。
+2026-03-04 23:46:31,194 INFO yield speech len 3.04, rtf 1.0649894413195158
+/inference_last_epoch_19/output_000.wav
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:07<00:00,  7.50s/it]
+
+[2/5] 合成: 还记得我把你捡回暗点的那个地方吗，那里有一台管风琴。...
+  0%|                                                                                                                   | 0/1 [00:00<?, ?it/s]2026-03-04 23:46:31,454 INFO synthesis text 还记得我把你捡回暗点的那个地方吗，那里有一台管风琴。
+2026-03-04 23:46:34,334 INFO yield speech len 5.6, rtf 0.514328522341592
+/inference_last_epoch_19/output_001.wav
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:03<00:00,  3.13s/it]
+
+[3/5] 合成: 今天天气真不错，适合出去走走。...
+  0%|                                                                                                                   | 0/1 [00:00<?, ?it/s]2026-03-04 23:46:34,645 INFO synthesis text 今天天气真不错，适合出去走走。
+2026-03-04 23:46:36,710 INFO yield speech len 3.72, rtf 0.5552300201949253
+/inference_last_epoch_19/output_002.wav
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  2.37s/it]
+
+[4/5] 合成: 时光荏苒，岁月如梭，转眼间我们已经走过了那么长的路。...
+  0%|                                                                                                                   | 0/1 [00:00<?, ?it/s]2026-03-04 23:46:36,932 INFO synthesis text 时光荏苒，岁月如梭，转眼间我们已经走过了那么长的路。
+2026-03-04 23:46:40,307 INFO yield speech len 6.96, rtf 0.4847780041310979
+/inference_last_epoch_19/output_003.wav
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:03<00:00,  3.59s/it]
+
+[5/5] 合成: 牛肉面是中国西北地区的特色美食，面条劲道，汤汁浓郁，深受各地食客喜爱。...
+  0%|                                                                                                                   | 0/1 [00:00<?, ?it/s]2026-03-04 23:46:40,551 INFO synthesis text 牛肉面是中国西北地区的特色美食，面条劲道，汤汁浓郁，深受各地食客喜爱。
+2026-03-04 23:46:44,323 INFO yield speech len 7.8, rtf 0.4835741336529072
+/inference_last_epoch_19/output_004.wav
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:04<00:00,  4.02s/it]
+
+============================================================
+推理完成!
+生成音频数: 5
+/inference_last_epoch_19_lr1e-6
+/inference_last_epoch_19/inference_report.txt
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.

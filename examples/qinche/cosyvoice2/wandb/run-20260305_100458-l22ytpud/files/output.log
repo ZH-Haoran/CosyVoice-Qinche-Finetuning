@@ -1,0 +1,38 @@
+
+[WandB] 已初始化: https://wandb.ai/haoranzhang-me-the-chinese-university-of-hong-kong-shenzhen/cosyvoice-qinche/runs/l22ytpud
+
+[模型] 加载 CosyVoice2 from ../../../pretrained_models/CosyVoice2-0.5B
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+/data_hss/miniconda3/envs/cosyvoice/lib/python3.10/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+2026-03-05 10:05:19,412 INFO input frame rate=25
+/data_hss/miniconda3/envs/cosyvoice/lib/python3.10/site-packages/torch/nn/utils/weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+Downloading Model to directory: /root/.cache/modelscope/hub/pengzhendong/wetext
+2026-03-05 10:05:27,873 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-05 10:05:28,360 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/revisions HTTP/1.1" 200 222
+2026-03-05 10:05:28,468 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo/files?Revision=master&Recursive=True HTTP/1.1" 200 None
+Downloading Model to directory: /root/.cache/modelscope/hub/pengzhendong/wetext
+2026-03-05 10:05:28,666 DEBUG Starting new HTTPS connection (1): www.modelscope.cn:443
+2026-03-05 10:05:29,156 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/revisions HTTP/1.1" 200 222
+2026-03-05 10:05:29,267 DEBUG https://www.modelscope.cn:443 "GET /api/v1/models/pengzhendong/wetext/repo/files?Revision=master&Recursive=True HTTP/1.1" 200 None
+2026-03-05 10:05:29,460 INFO use wetext frontend
+/epoch_0_whole.ptpoint: exp/cosyvoice2/llm_lr1e-6
+Traceback (most recent call last):
+  File "/data_hss/zhanghaoran/CosyVoice/examples/qinche/cosyvoice2/inference.py", line 256, in <module>
+    main()
+  File "/data_hss/zhanghaoran/CosyVoice/examples/qinche/cosyvoice2/inference.py", line 179, in main
+    cosyvoice.model.llm.load_state_dict(state_dict, strict=True)
+  File "/data_hss/miniconda3/envs/cosyvoice/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2189, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for Qwen2LM:
+	Unexpected key(s) in state_dict: "epoch", "step".
+Traceback (most recent call last):
+  File "/data_hss/zhanghaoran/CosyVoice/examples/qinche/cosyvoice2/inference.py", line 256, in <module>
+    main()
+  File "/data_hss/zhanghaoran/CosyVoice/examples/qinche/cosyvoice2/inference.py", line 179, in main
+    cosyvoice.model.llm.load_state_dict(state_dict, strict=True)
+  File "/data_hss/miniconda3/envs/cosyvoice/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2189, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for Qwen2LM:
+	Unexpected key(s) in state_dict: "epoch", "step".

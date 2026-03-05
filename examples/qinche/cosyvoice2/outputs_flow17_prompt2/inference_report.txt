@@ -1,0 +1,19 @@
+CosyVoice2 秦彻音色复刻推理报告
+============================================================
+
+模型: pretrained_models/CosyVoice2-0.5B
+Flow权重: examples/qinche/cosyvoice2/exp/cosyvoice2/flow/epoch_17_whole.pt
+提示音频: data/qinche/inference_ref/prompt_2.wav
+提示文本: 还记得我把你捡回暗点的那个地方吗，那里有一台管风琴。
+
+生成音频数: 8
+
+生成的音频:
+  - examples/qinche/cosyvoice2/outputs_flow17_prompt2/output_000.wav: 跟你做的每一件事，都不讨厌。
+  - examples/qinche/cosyvoice2/outputs_flow17_prompt2/output_001.wav: 还记得我把你捡回暗点的那个地方吗，那里有一台管风琴。
+  - examples/qinche/cosyvoice2/outputs_flow17_prompt2/output_002.wav: 今天天气真不错，适合出去走走。
+  - examples/qinche/cosyvoice2/outputs_flow17_prompt2/output_003.wav: 在这个充满挑战的时代，我们需要更多的勇气和智慧。
+  - examples/qinche/cosyvoice2/outputs_flow17_prompt2/output_004.wav: 时光荏苒，岁月如梭，转眼间我们已经走过了那么长的路。
+  - examples/qinche/cosyvoice2/outputs_flow17_prompt2/output_005.wav: 每一个梦想都值得被认真对待，每一份努力都不会被辜负。
+  - examples/qinche/cosyvoice2/outputs_flow17_prompt2/output_006.wav: 人工智能正在深刻改变我们的生活方式，从智能手机到自动驾驶，科技的力量无处不在。
+  - examples/qinche/cosyvoice2/outputs_flow17_prompt2/output_007.wav: 牛肉面是中国西北地区的特色美食，面条劲道，汤汁浓郁，深受各地食客喜爱。
