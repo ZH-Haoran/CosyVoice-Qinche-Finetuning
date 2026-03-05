@@ -1,0 +1,60 @@
+accum_grad: 1
+batch_idx: 14
+checkpoint: ../../../pretrained_models/CosyVoice2-0.5B/llm.pt
+config: conf/cosyvoice2_llm.yaml
+cv_data: dev.data.list
+deepscale: false
+deepscale_config: null
+deepspeed: false
+deepspeed_config: null
+dist_backend: nccl
+dpo: false
+dtype: bf16
+epoch: 5
+grad_clip: 1.0
+grad_norm: !!python/object/apply:torch._utils._rebuild_tensor_v2
+- !!python/object/apply:torch.storage._load_from_bytes
+  - !!binary |
+    gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+    AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+    aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+    Z2UKcQFYCgAAADE4MzcwMTcyOTZxAlgGAAAAY3VkYTowcQNLAU50cQRRLoACXXEAWAoAAAAxODM3
+    MDE3Mjk2cQFhLgEAAAAAAAAAIcY7QA==
+- 0
+- !!python/tuple []
+- !!python/tuple []
+- false
+- !!python/object/apply:collections.OrderedDict
+  - []
+log_interval: 1
+loss_dict:
+  acc: 0.3148574868248681
+  loss: 3.3225413853839294
+lr: 1.0e-06
+max_epoch: 20
+model: llm
+model_dir: exp/cosyvoice2/llm_lr1e-6_batch8000
+num_workers: 2
+onnx_path: ../../../pretrained_models/CosyVoice2-0.5B
+optim: adamw
+optim_conf:
+  betas:
+  - 0.9
+  - 0.98
+  lr: 1.0e-06
+  weight_decay: 0.01
+pin_memory: true
+prefetch: 100
+qwen_pretrain_path: ../../../pretrained_models/CosyVoice2-0.5B/CosyVoice-BlankEN
+ref_model: null
+save_per_step: -1
+save_states: model_only
+save_time: 05/03/2026 17:17:52
+scheduler: constantlr
+step: 392
+tag: CV
+tensorboard_dir: tensorboard/cosyvoice2/llm_lr1e-6_batch8000
+timeout: 60
+train_data: train.data.list
+train_engine: torch_ddp
+use_amp: true

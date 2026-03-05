@@ -1,0 +1,40 @@
+accum_grad: 1
+checkpoint: ../../../pretrained_models/CosyVoice2-0.5B/llm.pt
+config: conf/cosyvoice2_llm.yaml
+cv_data: dev.data.list
+deepscale: false
+deepscale_config: null
+deepspeed: false
+deepspeed_config: null
+dist_backend: nccl
+dpo: false
+dtype: bf16
+epoch: -1
+grad_clip: 1.0
+log_interval: 1
+max_epoch: 20
+model: llm
+model_dir: exp/cosyvoice2/llm_lr1e-6_batch8000
+num_workers: 2
+onnx_path: ../../../pretrained_models/CosyVoice2-0.5B
+optim: adamw
+optim_conf:
+  betas:
+  - 0.9
+  - 0.98
+  lr: 1.0e-06
+  weight_decay: 0.01
+pin_memory: true
+prefetch: 100
+qwen_pretrain_path: ../../../pretrained_models/CosyVoice2-0.5B/CosyVoice-BlankEN
+ref_model: null
+save_per_step: -1
+save_states: model_only
+save_time: 05/03/2026 17:15:19
+scheduler: constantlr
+step: 0
+tensorboard_dir: tensorboard/cosyvoice2/llm_lr1e-6_batch8000
+timeout: 60
+train_data: train.data.list
+train_engine: torch_ddp
+use_amp: true
