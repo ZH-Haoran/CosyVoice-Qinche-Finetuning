@@ -23,7 +23,7 @@ export CUDA_VISIBLE_DEVICES="0"
 # ========================================
 # WandB 配置 (可选 - 需要先 wandb login)
 # ========================================
-export WANDB_PROJECT="cosyvoice-qinche"
+export WANDB_PROJECT="cosyvoice-qinche-formal"
 # 生成唯一的时间戳，确保 WANDB_RUN_NAME 和 WANDB_RUN_ID 使用相同的值
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 export WANDB_RUN_NAME="flow-finetune-lr${LR}-batch${BATCH_SIZE}-${TIMESTAMP}"
@@ -150,6 +150,7 @@ run_inference() {
         --prompt_text="跟你做的每一件事，都不讨厌。" \
         --text_file="inference_texts.txt" \
         --output_dir="$output_dir" \
+        --audio_prefix="$tag" \
         --use_wandb \
         --wandb_project="$WANDB_PROJECT" \
         --wandb_run_id="$WANDB_RUN_ID" \

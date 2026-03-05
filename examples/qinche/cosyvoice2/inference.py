@@ -113,6 +113,9 @@ def main():
                         help='WandB run ID（用于 resume 已有的 run）')
     parser.add_argument('--no_wandb_init', action='store_true',
                         help='不初始化 WandB，使用外部传入的 run')
+    parser.add_argument('--audio_prefix', type=str,
+                        default=None,
+                        help='音频名称前缀（如 best/last，用于区分不同 checkpoint 的音频）')
     args = parser.parse_args()
 
     os.makedirs(args.output_dir, exist_ok=True)
@@ -248,11 +251,13 @@ def main():
 
                 # 上传到 WandB
                 if wandb_run is not None:
+                    # 使用前缀区分不同 checkpoint 的音频
+                    audio_prefix = f"{args.audio_prefix}_" if args.audio_prefix else ""
                     wandb_run.log({
-                        f"audio_{idx}": wandb.Audio(output_wav, sample_rate=cosyvoice.sample_rate, caption=text[:50]),
-                        f"text_{idx}": text,
-                        f"duration_{idx}": duration,
-                        f"speaker_similarity_{idx}": spk_sim,
+                        f"audio_{audio_prefix}{idx}": wandb.Audio(output_wav, sample_rate=cosyvoice.sample_rate, caption=text[:50]),
+                        f"text_{audio_prefix}{idx}": text,
+                        f"duration_{audio_prefix}{idx}": duration,
+                        f"speaker_similarity_{audio_prefix}{idx}": spk_sim,
                     })
 
         except Exception as e:

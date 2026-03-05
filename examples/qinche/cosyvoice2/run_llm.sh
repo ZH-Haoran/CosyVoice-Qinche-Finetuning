@@ -25,7 +25,7 @@ export CUDA_VISIBLE_DEVICES="0"
 # ========================================
 # WandB 配置 (可选 - 需要先 wandb login)
 # ========================================
-export WANDB_PROJECT="cosyvoice-qinche-clean"
+export WANDB_PROJECT="cosyvoice-qinche-formal"
 # 生成唯一的时间戳，确保 WANDB_RUN_NAME 和 WANDB_RUN_ID 使用相同的值
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 export WANDB_RUN_NAME="llm-finetune-lr${LR}-batch${BATCH_SIZE}-${TIMESTAMP}"
@@ -143,19 +143,20 @@ run_inference() {
     echo "输出目录: $output_dir"
     echo "========================================"
 
-    # 只使用 prompt_1 进行推理，使用同一个 wandb run id
+    # 只使用 prompt_2 进行推理，使用同一个 wandb run id
     # 注意: prompt_text 必须与 prompt_audio 中说的内容完全一致！
     python inference.py \
         --model_dir="../../../pretrained_models/CosyVoice2-0.5B" \
         --llm_checkpoint="$ckpt" \
-        --prompt_audio="../../../data/qinche/inference_ref/prompt_1.wav" \
-        --prompt_text="跟你做的每一件事，都不讨厌。" \
+        --prompt_audio="../../../data/qinche/inference_ref/prompt_2.wav" \
+        --prompt_text="还记得我把你捡回暗点的那个地方吗，那里有一台管风琴。" \
         --text_file="inference_texts.txt" \
         --output_dir="$output_dir" \
+        --audio_prefix="$tag" \
         --use_wandb \
         --wandb_project="$WANDB_PROJECT" \
         --wandb_run_id="$WANDB_RUN_ID" \
-        --wandb_run_name="${WANDB_RUN_NAME}_epoch${epoch}_${tag}_prompt1"
+        --wandb_run_name="${WANDB_RUN_NAME}_epoch${epoch}_${tag}_prompt2"
 }
 
 # ========================================
@@ -230,6 +231,6 @@ echo "========================================"
 echo "推理完成"
 echo "  - Best checkpoint: Epoch $BEST_EPOCH (CV loss: $BEST_LOSS)"
 echo "  - Last checkpoint: Epoch $LAST_EPOCH"
-echo "  - 仅使用 prompt_1"
+echo "  - 仅使用 prompt_2"
 echo "  - 音频已上传到 WandB"
 echo "========================================"

@@ -21,7 +21,7 @@ export CUDA_VISIBLE_DEVICES="0"
 # ========================================
 # WandB 配置 (可选)
 # ========================================
-export WANDB_PROJECT="cosyvoice-qinche-clean"
+export WANDB_PROJECT="cosyvoice-qinche-formal"
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 export WANDB_RUN_NAME="zeroshot-${TIMESTAMP}"
 export WANDB_RUN_ID="zeroshot-${TIMESTAMP}"
@@ -32,8 +32,8 @@ export WANDB_API_KEY="wandb_v1_aPu0vYkjbi5MRVe40Lc7WTxxe3z_mCgXu9qoWUNwxRQOqLeIk
 # ========================================
 MODEL_DIR=../../../pretrained_models/CosyVoice2-0.5B
 OUTPUT_DIR=outputs_zeroshot
-PROMPT_AUDIO=../../../data/qinche/inference_ref/prompt_1.wav
-PROMPT_TEXT="跟你做的每一件事，都不讨厌。"
+PROMPT_AUDIO=../../../data/qinche/inference_ref/prompt_2.wav
+PROMPT_TEXT="还记得我把你捡回暗点的那个地方吗，那里有一台管风琴。"
 TEXT_FILE=inference_texts.txt
 
 mkdir -p $OUTPUT_DIR
